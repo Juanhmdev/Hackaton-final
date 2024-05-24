@@ -1,0 +1,145 @@
+
+.portada-inicial {
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos (texto e imagen) */
+    align-items: center; /* Centra verticalmente los elementos */
+    background: linear-gradient(90deg, rgba(54, 117, 199, 0.795), rgba(221, 221, 221, 0.5)), 
+                radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent 70%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 88vh; 
+    position: relative; 
+    overflow: hidden; 
+    padding: 0 5%; /* Añade un padding general para el contenido */
+    text-align: left;
+    font-family: sans-serif;
+}
+
+.portada-inicial img {
+    width: 490px; /* Ancho fijo para la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    padding: 0; /* Elimina el padding adicional */
+    margin-left: -6rem; /* Añade un margen a la izquierda para separar del texto */
+    margin-right: 150px; /* Espacio entre la imagen y el texto */
+}
+
+.container {
+    display: grid;
+    row-gap: 18px;
+}
+
+.titulo {
+    flex: 1;
+    margin-right: 20px; /* Espacio entre el título y el texto */
+    width: 700px; /* Establece un ancho fijo para el contenedor del título */ /* Espacio entre el título y el texto */
+}
+
+.titulo h1 {
+    margin: 0;
+    font-size: 30PX; /* Elimina el margen por defecto */
+}
+
+.titulo h1 span {
+    display: block; /* Asegúrate de que el span esté en una nueva línea */
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 1.1;
+}
+
+.texto {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    display: flex;
+    margin-right: 16rem;
+    margin-top: 20px;
+    width: 700px;
+}
+
+.texto p {
+    margin: 0; /* Asegúrate de que el párrafo no tenga margen adicional */
+}
+
+.btn10{
+    top: 10px;
+    padding: 10px;
+    margin-right: 40rem;
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #fff;
+    cursor: pointer; /* Usa 'pointer' en lugar de 'hand' */
+    text-align: center;
+    text-transform: uppercase!important;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden!important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: transparent!important;
+    z-index: 10;
+    width: 200px; /* Establece un ancho fijo */
+    height: 50px;
+}
+
+
+.btn10:hover{
+    border: 1px solid #071982;
+    color: #80ffd3!important;
+    border-radius: 20px;
+}
+.btn10::before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #071982;
+    position: absolute;
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg); 
+    transform: skewX(-20deg);   
+    left: -10%;
+    opacity: 1;
+    top: 0;
+    z-index: -12;
+    -moz-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+     box-shadow:2px 0px 14px rgba(0,0,0,.6);
+  } 
+
+.btn10::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #67b4b9;
+    position: absolute;
+  -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg); 
+    transform: skewX(-20deg);   
+    left: -10%;
+    opacity: 0;
+    top: 0;
+    z-index: -15;
+    -webkit-transition: all .94s cubic-bezier(.2,.95,.57,.99);
+    -moz-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    -o-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    box-shadow: 2px 0px 14px rgba(0,0,0,.6);
+}
+.btn10:hover::before, .btn1O:hover::before{
+  opacity:1;
+  width: 116%;
+}
+.btn10:hover::after, .btn1O:hover::after{
+  opacity:1;
+  width: 120%;
+}
