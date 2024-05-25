@@ -1,6 +1,6 @@
 
 .portada-inicial {
-    margin-top: 500px;
+    margin-top: 1400px;
     display: flex;
     justify-content: space-between; /* Espacia los elementos (texto e imagen) */
     align-items: center; /* Centra verticalmente los elementos */
@@ -18,16 +18,16 @@
 }
 
 .portada-inicial img {
-    width: 600px; /* Ancho fijo para la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 700px; /* Ancho fijo para la imagen */
+    height: 600px; /* Mantiene la proporción de la imagen */
     padding: 0; /* Elimina el padding adicional */
     margin-left: -6rem; /* Añade un margen a la izquierda para separar del texto */
-    margin-right: 150px; /* Espacio entre la imagen y el texto */
+    margin-right: 50px; /* Espacio entre la imagen y el texto */
 }
 
 .container {
     display: grid;
-    row-gap: 18px;
+    row-gap: 19px;
 }
 
 .titulo {

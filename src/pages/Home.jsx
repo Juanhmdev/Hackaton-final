@@ -5,6 +5,10 @@ import { ProductProvider } from "../contexts/ProductContext";
 import { LuLoader } from "react-icons/lu";
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
+import Footer from "../components/Footer/Footer";
+import Formulario from "../components/Formulario/Forms";
+
+
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
@@ -46,21 +50,24 @@ const Home = () => {
                     <motion.h1 className="section-title"
                         initial={{ opacity: 0, y: 100 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 3 }}>Categories</motion.h1>
+                        transition={{ duration: 3 }}>Categoria</motion.h1>
                     <CategoryList />
                 </div>
 
                 <div className="products">
                     <motion.h1 className="section-title" initial={{ opacity: 0, y: 100 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 3 }}>Products</motion.h1>
+                        transition={{ duration: 3 }}>Productos</motion.h1>
                     <ProductList />
                 </div>
             </div>
+            <div>
+                <Formulario />
+            </div>
             <footer className="footer-container">
-                <h4>Hola mundo</h4>
+                <Footer />
             </footer>
-        </ProductProvider>
+        </ProductProvider >
     );
 };
 

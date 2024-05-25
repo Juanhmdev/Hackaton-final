@@ -35,3 +35,4 @@ export const Portal = () => {
         </div>
     )
 }
+export default Portal;
