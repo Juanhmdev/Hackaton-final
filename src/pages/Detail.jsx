@@ -1,6 +1,6 @@
 import ProductDetail from "../components/ProductDetail/ProductDetail"
 
-const Details = () => {
+const Detail = () => {
 
     return (
         <div className="detail-page">
@@ -9,4 +9,4 @@ const Details = () => {
     )
 }
 
-export default Details
+export default Detail;

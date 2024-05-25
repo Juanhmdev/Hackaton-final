@@ -1,6 +1,8 @@
 import { TbPlus } from "react-icons/tb";
 import "./ProductCard.css";
 import { useCart } from "../../contexts/CartContext";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 
 
@@ -11,22 +13,29 @@ const ProductCard = ({ product }) => {
     addToCart(product);
   };
   return (
-    <div className="card-container">
+    <motion.div
+      className="card-container"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 3 }}
+    >
       <div className="card-image">
         <img src={product.image} alt="product image" />
       </div>
       <div className="card-detail">
-        <h4 className="card-title">{product.title}</h4>
-        <div className="card-category">{product.category}</div>
+        <Link to={`/product/${product.id}`}>
+          <h4 className="card-title">{product.title}</h4>
+          <div className="card-category">{product.category}</div>
+        </Link>
 
         <div className="card-flex">
           <div className="card-price">S/{product.price}</div>
           <div className="card-button" onClick={() => handleAdd(product)}>
-            <TbPlus />
+            <TbPlus className="icon-card-button" />
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

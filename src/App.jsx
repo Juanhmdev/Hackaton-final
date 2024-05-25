@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/header/Header";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
-import Details from "./pages/Details";
+import Detail from "./pages/Detail";
 
 
 function App() {
@@ -11,11 +11,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/category/:category" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/product/:id" element={<Details />} />
+        <Route path="/product/:id" element={<Detail />} />
       </Routes>
     </>
   );
 }
 
-export default App;
+export default App

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import "./Portal.css";
+import { motion } from "framer-motion";
 
 export const Portal = () => {
     useEffect(() => {
@@ -11,7 +12,10 @@ export const Portal = () => {
 
     return (
         <div className="portada-inicial">
-            <div className="container">
+            <motion.div className="container"
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2 }}>
                 <div className="titulo">
                     <h1>Tu Tienda Online de Confianza <br /> <span>Encuentra Todo lo que Necesitas</span></h1>
                 </div>
@@ -23,8 +27,11 @@ export const Portal = () => {
                 <a href="#main-content">
                     <button className="btn10">Ver productos</button>
                 </a>
-            </div>
-            <img className="port" src="/src/assets/Portadahome-removebg-preview.png" alt="Portada"></img>
+            </motion.div>
+            <motion.img className="port" src="/src/assets/Portadahome-removebg-preview.png" alt="Portada"
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2 }}></motion.img>
         </div>
     )
 }

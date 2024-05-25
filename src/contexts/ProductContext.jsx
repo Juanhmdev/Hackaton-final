@@ -1,22 +1,18 @@
+import { createContext, useContext, useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-import { createContext, useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-
-const ProductContext = createContext()
+// Creación del contexto
+const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
-
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
-
     const { category } = useParams();
-
-    console.log(products);
 
     const getProducts = async (category) => {
         try {
             setLoading(true);
-            let url = 'https://fakestoreapi.com/products'
+            let url = 'https://fakestoreapi.com/products';
             if (category) {
                 url += `/category/${category}/?limit=4`;
             } else {
@@ -26,18 +22,20 @@ export const ProductProvider = ({ children }) => {
             if (res.ok) {
                 const data = await res.json();
                 setProducts(data);
-                setLoading(false);
+            } else {
+                console.error('Error fetching data:', res.statusText);
             }
         } catch (error) {
-            console.error(error);
+            console.error('Fetch error:', error);
         } finally {
             setLoading(false);
         }
     };
 
     useEffect(() => {
-        getProducts(category)
-    }, [category])
+        getProducts(category);
+    }, [category]);
+
     return (
         <ProductContext.Provider value={{ products, loading }}>
             {children}

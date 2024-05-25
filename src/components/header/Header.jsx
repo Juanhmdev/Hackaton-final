@@ -1,3 +1,4 @@
+
 import { TbSearch } from "react-icons/tb";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 import { FcShop } from "react-icons/fc";
@@ -34,4 +35,4 @@ const Header = () => {
     );
 };
 
-export default Header
+export default Header;

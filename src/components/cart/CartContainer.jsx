@@ -28,7 +28,7 @@ const CartContainer = () => {
 
     return (
         <div className="cart-wrapper">
-            <h2 className="section-title">Shopping Cart</h2>
+            <h2 className="section-title">Carrito de compras</h2>
             <div className="cart-container">
                 {cartItems && cartItems.length > 0 ? (
                     <>

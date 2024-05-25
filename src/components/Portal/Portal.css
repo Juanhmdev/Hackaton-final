@@ -1,24 +1,24 @@
 
 .portada-inicial {
+    margin-top: 500px;
     display: flex;
     justify-content: space-between; /* Espacia los elementos (texto e imagen) */
     align-items: center; /* Centra verticalmente los elementos */
     background: linear-gradient(90deg, rgba(54, 117, 199, 0.795), rgba(221, 221, 221, 0.5)), 
                 radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent 70%);
     background-blend-mode: overlay;
-    background-size: cover;
+    background-size: cover; /* Ajusta automáticamente la imagen de fondo al tamaño del contenedor */
     background-repeat: no-repeat;
-    width: 100%;
+    min-width: 1000px;
     height: 88vh; 
     position: relative; 
     overflow: hidden; 
     padding: 0 5%; /* Añade un padding general para el contenido */
-    text-align: left;
     font-family: sans-serif;
 }
 
 .portada-inicial img {
-    width: 490px; /* Ancho fijo para la imagen */
+    width: 600px; /* Ancho fijo para la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
     padding: 0; /* Elimina el padding adicional */
     margin-left: -6rem; /* Añade un margen a la izquierda para separar del texto */

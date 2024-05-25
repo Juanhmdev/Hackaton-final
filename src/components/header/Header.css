@@ -7,7 +7,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding:  20px 5%;
+    padding:  10px 5%;
     position: fixed; /* Agregamos la propiedad 'position: fixed' */
     top: 0; /* Fijamos el encabezado en la parte superior */
     left: 0; /* Ajustamos la posición del encabezado */
@@ -24,7 +24,7 @@
     color: #292525 !important;
     font-size: 11px;
     font-weight: 500;
-    padding: 0.5em 1.2em;
+    padding: 5px 1px;
     position: relative;
     outline: 1px solid;
     outline-color: rgb(255, 252, 252);
@@ -43,7 +43,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-right: 130px;
+    margin-right: 150px;
 }
 
 .search-input {

@@ -1,0 +1,175 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: #f0f0f0; /* Un color de fondo para mejor visibilidad */
+}
+
+.loading-text{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Aplica la animación al ícono */
+.icon-loading {
+    animation: spin 2s linear infinite;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.product-container {
+    margin: 130px auto; /* Centrado horizontalmente y margen superior */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    background: #fff;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de elevación */
+}
+
+.product-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img {
+    width: 300px;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.product-detail {
+    flex: 1;
+    padding: 5rem 4rem;
+    background: #dde2eb;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.product-category {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #0c0c0c;
+}
+
+.product-rating {
+    display:  flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-rating-start {
+    color: rgb(14, 98, 207);
+}
+
+.product-rating span {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.product-description {
+    font-size: 14pxs;
+    text-align: justify;
+}
+
+.product-price {
+    font-size: 1.4rem;
+    font-weight:600;
+}
+
+.product-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilos base del botón */
+.product-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-width: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.add-to-cart {
+    font-weight:800; 
+    background-color: #ffffff;
+}
+
+.buy-btn {
+    background: rgb(0, 0, 0);
+    color: white;
+    font-weight: 800;
+    margin-left: 20px;
+}
+
+/* Estilos para el contenedor de botones del producto */
+.product-buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Estilos para los botones del producto */
+.product-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 12px 30px;
+    cursor: pointer;
+    overflow: hidden; /* Asegura que el ícono no sea visible fuera del contenedor */
+}
+
+/* Estilos para el ícono dentro de los botones */
+.product-btn .icon {
+    opacity: 0;
+    position: absolute;
+    left: -30px; /* Posición inicial fuera de la vista */
+    transition: opacity 0.25s ease, left 0.25s ease; /* Transición para la opacidad y la posición */
+}
+
+/* Estilos específicos del efecto de deslizamiento del ícono */
+.product-btn.icon-slide-left span {
+    transition: margin-left 0.25s ease;
+    position: relative; /* Asegura que el texto se mueva correctamente */
+}
+
+/* Estilos al hacer hover en el botón */
+.product-btn.icon-slide-left:hover .icon {
+    opacity: 1;
+    left: 10px; /* Posición final visible */
+}
+
+.product-btn.icon-slide-left:hover span {
+    margin-left: 26px;
+}
+
+/* Ajustes específicos para los íconos de los botones */
+.product-btn.add-to-cart .icon,
+.product-btn.buy-btn .icon {
+    margin-right: 10px;
+}
