@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import Footer from "../components/Footer/Footer";
 import Formulario from "../components/Formulario/Forms";
+import "./Home.css"
 
 
 
